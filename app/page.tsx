@@ -1,3 +1,4 @@
+import HeroCarousel from "@/components/HeroCarousel";
 import SearchBar from "@/components/SearchBar";
 import Image from "next/image";
 import React from "react";
@@ -5,7 +6,7 @@ import React from "react";
 const HomePage = () => {
   return (
     <>
-      <section className="px-6 md:px-20 py-24 border-2 border-red-500">
+      <section className="px-6 md:px-20 py-24">
         <div className="flex max-xl:flex-col gap-16">
           <div className="flex flex-col justify-center">
             <p className="small-text">
@@ -22,7 +23,7 @@ const HomePage = () => {
             <SearchBar />
           </div>
           {/* ========== Hero carousel ============ */}
-          {/* <HeroCarousel/> */} Hero carousel
+          <HeroCarousel />
         </div>
       </section>
       {/* =============================== Trending ================ */}
@@ -30,8 +31,8 @@ const HomePage = () => {
         <h2 className="section-text">Trending</h2>
 
         <div className="flex flex-wrap gap-x-8 gap-y-16">
-          {["Apple Iphone 15", "Book", "Sneakers"].map((product) => (
-            <div>{product}</div>
+          {["Apple Iphone 15", "Book", "Sneakers"].map((product, i) => (
+            <div key={i}>{product}</div>
           ))}
         </div>
       </section>
