@@ -1,3 +1,4 @@
+import SearchBar from "@/components/SearchBar";
 import Image from "next/image";
 import React from "react";
 
@@ -18,7 +19,7 @@ const HomePage = () => {
             {/* ========== */}
             <p className="mt-6">Powerful, self-serve product and growth analytics to help you convert, engage, and retain more.</p>
             {/* ========== Search Bar ============ */}
-            {/* <SearchBar /> */} Search bar
+            <SearchBar />
           </div>
           {/* ========== Hero carousel ============ */}
           {/* <HeroCarousel/> */} Hero carousel
